@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mod2LabA.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="BMI Calculator"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Enter your weight and height to find out your Body Mass Index"
+                Style="{StaticResource SubHeadline}" />
+
+            <Editor x:Name="Weight" Placeholder="Weight in lbs"/>
+            
+            <Editor x:Name="Height" Placeholder="Height in inches"/>
+
+            <Button
+                x:Name="CalculateButton"
+                Text="Calculate BMI" 
+                Clicked="CalculateBMI"
+                HorizontalOptions="Fill" />
+
+            <Label Text="Your BMI is: " x:Name="BmiOutput" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
